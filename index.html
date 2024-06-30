@@ -14,13 +14,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/style.min.css" />
+
     <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="/server.js" defer></script>
     <title>Rock Burger</title>
   </head>
   <body class="bg-black font-sans">
     <!-- HEADER -->
-    <header class="w-full h-[420px] bg-zinc-900 bg-banner bg-center bg-cover">
+    <header class="w-full h-[600px] bg-zinc-900 bg-banner bg-top bg-cover">
       <div class="w-full h-full flex flex-col justify-center items-center">
         <h1 class="text-5xl text-center text-white font-bold mb-4">
           Rock Burger
@@ -70,7 +77,7 @@
               <p class="font-bold text-lg">R$ 18.90</p>
               <button
                 class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn cursor-pointer"
-                data-name="Hamburguer Smash"
+                data-name="Burguer 1"
                 data-price="18.90"
               >
                 <i class="bi bi-cart-check-fill"></i>
@@ -99,7 +106,7 @@
               <p class="font-bold text-lg">R$ 18.90</p>
               <button
                 class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                data-name="Hamburguer Smash"
+                data-name="Burguer 2"
                 data-price="18.90"
               >
                 <i class="bi bi-cart-check-fill"></i>
@@ -128,7 +135,7 @@
               <p class="font-bold text-lg">R$ 18.90</p>
               <button
                 class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                data-name="Hamburguer Smash"
+                data-name="Burguer 3"
                 data-price="18.90"
               >
                 <i class="bi bi-cart-check-fill"></i>
@@ -157,7 +164,7 @@
               <p class="font-bold text-lg">R$ 18.90</p>
               <button
                 class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                data-name="Hamburguer Smash"
+                data-name="Burguer 4"
                 data-price="18.90"
               >
                 <i class="bi bi-cart-check-fill"></i>
@@ -186,7 +193,7 @@
               <p class="font-bold text-lg">R$ 18.90</p>
               <button
                 class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                data-name="Hamburguer Smash"
+                data-name="Burguer 5"
                 data-price="18.90"
               >
                 <i class="bi bi-cart-check-fill"></i>
@@ -292,7 +299,10 @@
       <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
         <h2 class="text-center font-bold text-2xl mb-2">Meu carinho</h2>
 
-        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+        <div
+          id="cart-items"
+          class="flex justify-between flex-col overflow-auto max-h-[300px] mb-4 pr-4"
+        ></div>
 
         <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
 
@@ -300,7 +310,7 @@
 
         <input
           id="address"
-          class="w-full border-2p-1rounded my-1"
+          class="w-full border-2 p-1 rounded my-1"
           type="text"
           placeholder="Digite seu endereço completo"
         />
@@ -328,7 +338,7 @@
         class="flex items-center justify-center py-3 text-center gap-2 text-white font-bold cursor-pointer w-full"
         id="cart-btn"
       >
-        (<span id="cart-count" class="">2</span>) Veja o carrinho
+        (<span id="cart-count" class="">0</span>) Veja o carrinho
         <i class="bi bi-cart-check-fill"></i>
       </button>
     </footer>
